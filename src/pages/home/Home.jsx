@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Context } from "../../context/context";
 
-import FirstSection from "../products/firstSection";
+import FirstSection from "./firstSection";
 import SecondSection from "./secondSection";
 import ThirdSection from "./thirdSection";
 import FourthSection from "./fourthSection";
