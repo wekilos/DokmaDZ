@@ -2,6 +2,7 @@ import axios from "axios";
 import { token } from "./token";
 // const BASE_URL = "http://localhost:8181";
 const BASE_URL = "http://95.85.127.28:8004/";
+const BASE_URL2 = "http://95.85.127.28:8005/";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -15,4 +16,4 @@ const axiosInstance = axios.create({
   },
 });
 
-export { BASE_URL, axiosInstance };
+export { BASE_URL, BASE_URL2, axiosInstance };

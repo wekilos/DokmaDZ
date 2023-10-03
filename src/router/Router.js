@@ -3,7 +3,15 @@ import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
 
 import PageLoading from "../components/PageLoading";
 
-import { Home, About, Products, Pictures, Contact } from "../pages/index";
+import {
+  Home,
+  About,
+  Products,
+  Pictures,
+  Contact,
+  News,
+  AllNews,
+} from "../pages/index";
 
 import ScrollIntoView from "./ScrollIntoView";
 
@@ -37,8 +45,14 @@ const App = () => {
             />
             <PublicRoute
               restricted={true}
-              component={Pictures}
-              path="/pictures"
+              component={AllNews}
+              path="/news"
+              exact
+            />
+            <PublicRoute
+              restricted={true}
+              component={News}
+              path="/news/:id"
               exact
             />
             <PublicRoute
