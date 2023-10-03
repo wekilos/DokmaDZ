@@ -292,7 +292,7 @@ const News = () => {
     <div className="w-full">
       <Navigation path={lang[dil].news} />
 
-      <div className="w-full bg-[#0051CA] my-8 h-[242px] py-[94px] flex-col justify-start items-center gap-8 inline-flex">
+      <div className="w-full bg-cyan-500 my-8 h-[242px] py-[94px] flex-col justify-start items-center gap-8 inline-flex">
         <div className="w-[1280px] px-8 justify-start items-center gap-8 inline-flex">
           <div className="w-[640px] flex-col justify-start items-start gap-6 inline-flex">
             <div className="self-stretch text-white text-5xl font-semibold leading-[54px]">
