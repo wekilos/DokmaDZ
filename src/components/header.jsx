@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { BASE_URL, axiosInstance } from "../utils/axiosIntance";
 import { Context } from "../context/context";
 import { Drawer } from "antd";
@@ -72,10 +72,12 @@ const Header = () => {
         </div>
       </Drawer>
       <div className="w-[90%] px-8 md:justify-center justify-between items-center gap-8 inline-flex">
-        <img
-          className="w-[60px] h-[60px] text-blue border-white border-[1px]"
-          src={logo[0]?.logo[0]?.src}
-        />
+        <Link to="/">
+          <img
+            className="w-[60px] h-[60px] text-blue border-white border-[1px]"
+            src={logo[0]?.logo[0]?.src}
+          />
+        </Link>
         <div
           onClick={() => setMenu(true)}
           className="block md:hidden cursor-pointer"

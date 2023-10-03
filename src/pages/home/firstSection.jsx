@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import { useHistory } from "react-router-dom";
 import { Context } from "../../context/context";
+import { HashLink } from 'react-router-hash-link';
 import parse from "html-react-parser";
 import DOMPurify from "dompurify";
 import Slider from "react-slick";
@@ -52,18 +53,17 @@ const FirstSection = () => {
                 })}
               </div>
               <div className="self-stretch md:justify-start justify-center items-center gap-4 inline-flex">
-                <div
-                  onClick={() =>
-                    history.push({ pathname: slider?.button_link })
-                  }
-                  className="md:w-[163px] cursor-pointer w-full h-[40px] px-4 bg-cyan-700 rounded-[10px] shadow justify-center items-center gap-2 flex"
-                >
-                  <div className="text-white  whitespace-nowrap text-lg font-medium leading-normal">
-                    {slider?.contents?.map((item) => {
-                      return item?.[dil]?.button;
-                    })}
+                <HashLink to="/about#description">
+                  <div
+                    className="md:w-[163px] cursor-pointer w-full h-[40px] px-4 bg-cyan-700 rounded-[10px] shadow justify-center items-center gap-2 flex"
+                  >
+                    <div className="text-white  whitespace-nowrap text-lg font-medium leading-normal">
+                      {slider?.contents?.map((item) => {
+                        return item?.[dil]?.button;
+                      })}
+                    </div>
                   </div>
-                </div>
+                </HashLink>
                 {/* <div className="w-9 h-9 relative" /> */}
               </div>
             </div>

@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Context } from "../../context/context";
 import { axiosInstance } from "../../utils/axiosIntance";
 import Navigation from "../../components/navigation";
-import map from "../../images/map.png";
+import map from "../../images/map2.png";
 import mail from "../../images/mail.svg";
 import logo from "../../images/logo.svg";
 import lang from "../../lang/home.json";

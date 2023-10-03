@@ -67,6 +67,7 @@ const About = () => {
             <div className="h-[126px] flex-col justify-start items-center gap-6 flex">
               <div className="self-stretch text-center text-black md2:text-5xl text-4xl font-semibold leading-[54px]">
                 {videoSection?.contents?.map((item) => {
+                  console.log("video", item[dil])
                   return item[dil]?.title;
                 })}
               </div>
@@ -136,7 +137,9 @@ const About = () => {
         </div>
       </div>
 
-      <SecondSection />
+      <div id="description">
+        <SecondSection />
+      </div>
     </div>
   );
 };

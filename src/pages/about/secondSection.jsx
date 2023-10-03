@@ -49,7 +49,7 @@ const SecondSection = () => {
                 return item[dil]?.title;
               })}
             </div>
-            <div className="line-clamp-4 overflow-hidden w-1/2 text-center text-black text-opacity-50 md:text-lg text-[16px] font-normal leading-normal">
+            <div className="w-90 px-8 text-black text-opacity-50 md:text-lg text-[16px] font-normal leading-normal">
               {about?.contents?.map((item, i) => {
                 return htmlFrom(item[dil]?.description);
               })}
@@ -69,102 +69,7 @@ const SecondSection = () => {
           </div> */}
         </div>
       </div>
-      <div className="self-stretch min-h-[640px] flex-col justify-center items-center flex">
-        <div className="w-full px-8 justify-center items-center gap-8 md2:inline-flex block">
-          <div className="grow w-full shrink basis-0 self-stretch flex-col justify-center items-center gap-12 inline-flex">
-            <div className="self-stretch min-h-[174px] flex-col justify-start items-center gap-4 flex">
-              <div className="w-12 h-12 bg-zinc-100 rounded-full justify-center items-center gap-2 inline-flex">
-                <img
-                  src={about?.bannerchilds[0]?.icon[0]?.src}
-                  className="w-6 h-6 relative"
-                />
-              </div>
-              <div className="self-stretch text-center text-black text-xl font-medium leading-7">
-                {about?.bannerchilds[0]?.contents?.map((item) => {
-                  return item[dil]?.title;
-                })}
-              </div>
-              <div className="self-stretch text-center text-black text-opacity-50 text-base font-normal leading-snug">
-                {about?.bannerchilds[0]?.contents?.map((item) => {
-                  return htmlFrom(item[dil]?.descriptioin);
-                })}
-              </div>
-              <div className="text-center text-neutral-500 text-base font-medium leading-snug">
-                {lang[dil]?.learn}
-              </div>
-            </div>
-            <div className="self-stretch md2:pb-0 pb-4 min-h-[190px] flex-col justify-start items-center gap-4 flex">
-              <div className="w-12 h-12 bg-zinc-100 rounded-full justify-center items-center gap-2 inline-flex">
-                <img
-                  src={about?.bannerchilds[1]?.icon[0]?.src}
-                  className="w-6 h-6 relative"
-                />
-              </div>
-              <div className="self-stretch text-center text-black text-xl font-medium leading-7">
-                {about?.bannerchilds[1]?.contents?.map((item) => {
-                  return item[dil]?.title;
-                })}
-              </div>
-              <div className="self-stretch text-center text-black text-opacity-50 text-base font-normal leading-snug">
-                {about?.bannerchilds[1]?.contents?.map((item) => {
-                  return htmlFrom(item[dil]?.descriptioin);
-                })}
-              </div>
-              <div className="text-center text-neutral-500 text-base font-medium leading-snug">
-                {lang[dil]?.learn}
-              </div>
-            </div>
-          </div>
-          <img
-            className="md2:w-96 object-cover w-full md2:h-[640px] h-[512px] relative rounded-[40px]"
-            src={BASE_URL + about?.contents[0]?.tm?.images_for_web[0]?.src}
-          />
-          <div className="grow shrink basis-0 self-stretch flex-col justify-center items-center gap-12 inline-flex">
-            <div className="self-stretch md2:pt-0 pt-4 min-h-[190px] flex-col justify-start items-center gap-4 flex">
-              <div className="w-12 h-12 bg-zinc-100 rounded-full justify-center items-center gap-2 inline-flex">
-                <img
-                  src={about?.bannerchilds[2]?.icon[0]?.src}
-                  className="w-6 h-6 relative"
-                />
-              </div>
-              <div className="self-stretch text-center text-black text-xl font-medium leading-7">
-                {about?.bannerchilds[2]?.contents?.map((item) => {
-                  return item[dil]?.title;
-                })}
-              </div>
-              <div className="self-stretch text-center text-black text-opacity-50 text-base font-normal leading-snug">
-                {about?.bannerchilds[1]?.contents?.map((item) => {
-                  return htmlFrom(item[dil]?.descriptioin);
-                })}
-              </div>
-              <div className="text-center text-neutral-500 text-base font-medium leading-snug">
-                {lang[dil]?.learn}
-              </div>
-            </div>
-            <div className="self-stretch min-h-[234px] flex-col justify-start items-center gap-4 flex">
-              <div className="w-12 h-12 bg-zinc-100 rounded-full justify-center items-center gap-2 inline-flex">
-                <img
-                  src={about?.bannerchilds[3]?.icon[0]?.src}
-                  className="w-6 h-6 relative"
-                />
-              </div>
-              <div className="self-stretch text-center text-black text-xl font-medium leading-7">
-                {about?.bannerchilds[3]?.contents?.map((item) => {
-                  return item[dil]?.title;
-                })}
-              </div>
-              <div className="self-stretch text-center text-black text-opacity-50 text-base font-normal leading-snug">
-                {about?.bannerchilds[1]?.contents?.map((item) => {
-                  return htmlFrom(item[dil]?.descriptioin);
-                })}
-              </div>
-              <div className="text-center text-neutral-500 text-base font-medium leading-snug">
-                {lang[dil]?.learn}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

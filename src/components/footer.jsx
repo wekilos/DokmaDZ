@@ -68,7 +68,7 @@ const Footer = () => {
       </div>*/}
       <div className="self-stretch justify-center items-center inline-flex">
         <div className="min-h-[174px] w-[90%] justify-center items-start gap-8 flex">
-          <div className="grow shrink basis-0 h-8 justify-start items-center gap-2.5 flex">
+          <div className="grow shrink basis-0 justify-start items-center gap-2.5 flex">
             <img
               className="w-16 h-16 text-blue border-white border-[1px]"
               src={logo}
@@ -131,7 +131,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="self-stretch h-[72px] py-5 bg-white flex-col justify-center items-center flex">
-        <div className="w-[80%] px-8 justify-between items-center gap-8 inline-flex">
+        <div className="w-[80%] px-8 justify-between items-center gap-8">
           <div className="w-8 h-8 relative" />
           <div className="text-black text-base whitespace-nowrap font-normal leading-snug">
             {dil == "tm"

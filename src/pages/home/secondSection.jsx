@@ -18,7 +18,7 @@ const SecondSection = () => {
     axiosInstance
       .get("/api/banner")
       .then((data) => {
-        console.log(data.data);
+        console.log("about", data.data);
         data.data?.length > 0 && setAbout(data.data[0]);
       })
       .catch((err) => {
@@ -49,10 +49,8 @@ const SecondSection = () => {
                 return item[dil]?.title;
               })}
             </div>
-            <div className="line-clamp-4 overflow-hidden w-1/2 text-center text-black text-opacity-50 md:text-lg text-[16px] font-normal leading-normal">
-              {about?.contents?.map((item, i) => {
-                return htmlFrom(item[dil]?.description);
-              })}
+            <div className="overflow-hidden text-center text-black text-opacity-50 md:text-lg text-[16px] font-normal leading-normal">
+              {htmlFrom(lang[dil]?.aboutUsShort)}
             </div>
           </div>
           {/* <div className="w-full justify-center items-start gap-4 inline-flex">
@@ -117,7 +115,7 @@ const SecondSection = () => {
           </div>
           <img
             className="md2:w-96 object-cover w-full md2:h-[640px] h-[512px] relative rounded-[40px]"
-            src={BASE_URL + about?.contents[0]?.tm?.images_for_web[0]?.src}
+            src={BASE_URL + Object.values(about?.contents[0]||{})[0]?.images_for_web[0]?.src}
           />
           <div className="grow shrink basis-0 self-stretch flex-col justify-center items-center gap-12 inline-flex">
             <div className="self-stretch md2:pt-0 pt-4 min-h-[190px] flex-col justify-start items-center gap-4 flex">
