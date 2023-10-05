@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Navigation from "../../components/navigation";
 import SecondSection from "./secondSection";
-import { axiosInstance } from "../../utils/axiosIntance";
+import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
 import { Context } from "../../context/context";
 import { useHistory } from "react-router-dom";
 import parse from "html-react-parser";
@@ -81,8 +81,10 @@ const About = () => {
           <div
             className=" w-[70%]"
           >
+            
             <Carousel autoplay dots={false} autoplaySpeed={3000} focusOnSelect={false} pauseOnHover={false}>
               {videoSection?.thumbnail?.map((item, i) => {
+                console.log(BASE_URL + item.src);
                 return (
                   <div
                     key={"sli" + i}

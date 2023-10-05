@@ -16,11 +16,12 @@ const FirstSection = () => {
     getSlider();
   }, []);
 
+
   const getSlider = () => {
     axiosInstance
-      .get("/api/slider")
+      .get("/api/video-section")
       .then((data) => {
-        console.log(data.data?.length > 0 && data.data[0]);
+        console.log("production slider", data.data);
         setSlider(data.data?.length > 0 && data.data[0]);
       })
       .catch((err) => {
@@ -52,18 +53,16 @@ const FirstSection = () => {
         </div>
         <div className="md:w-1/2 w-full">
           <Carousel autoplay dots={false}>
-            {slider?.contents?.length > 0 &&
-              slider?.contents[0].tm?.images_for_web?.length > 0 &&
-              slider?.contents[0].tm?.images_for_web?.map((item, i) => {
-                console.log(BASE_URL + item.src);
+            { slider?.thumbnail?.map((item, i) => {
+                console.log(item.src);
                 return (
                   <div
                     className="grow shrink basis-0 self-stretch flex-col justify-center items-end gap-12 inline-flex"
                     key={"slider" + i}
                   >
                     <img
-                      className="w-[592px] lg:h-[600px] md2:h-[500px] md:h-[450px] h-[358px] relative rounded-tr-[128px] rounded-bl-[128px]"
-                      src={BASE_URL + item.src}
+                      className="w-[592px] relative rounded-tr-[128px] rounded-bl-[128px]"
+                      src={item.src}
                       alt="slider"
                     />
                   </div>
