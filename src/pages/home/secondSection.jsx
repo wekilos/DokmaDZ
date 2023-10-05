@@ -131,7 +131,7 @@ const SecondSection = () => {
                 })}
               </div>
               <div className="self-stretch text-center text-black text-opacity-50 text-base font-normal leading-snug">
-                {about?.bannerchilds[1]?.contents?.map((item) => {
+                {about?.bannerchilds[2]?.contents?.map((item) => {
                   return htmlFrom(item[dil]?.descriptioin);
                 })}
               </div>
@@ -152,7 +152,7 @@ const SecondSection = () => {
                 })}
               </div>
               <div className="self-stretch text-center text-black text-opacity-50 text-base font-normal leading-snug">
-                {about?.bannerchilds[1]?.contents?.map((item) => {
+                {about?.bannerchilds[3]?.contents?.map((item) => {
                   return htmlFrom(item[dil]?.descriptioin);
                 })}
               </div>

@@ -61,7 +61,16 @@ const Contact = () => {
                 </span>
                 <span className="text-black text-lg font-normal leading-normal">
                   {" "}
-                  {footers?.email}
+                  {footers?.email?.split("\r\n")[0]}
+                </span>
+              </div>
+              <div className="">
+                <span className="text-black text-lg font-bold leading-normal">
+                  {lang[dil]?.kmail}:
+                </span>
+                <span className="text-black text-lg font-normal leading-normal">
+                  {" "}
+                  {footers?.email?.split("\r\n")[1]}
                 </span>
               </div>
             </div>
