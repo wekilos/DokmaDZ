@@ -28,6 +28,7 @@ module.exports = {
         primary12: "#171717",
         primary2: "#F8F8F8",
         card: "#0C76980D",
+        passive2: "#898D9150",
         passive: "#898D91",
         black: "#000",
         "black-50": "#0005",
